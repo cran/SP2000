@@ -2,27 +2,27 @@
 % Please edit documentation in R/open_URL.R
 \name{open_URL}
 \alias{open_URL}
-\title{Opening the web pages with query}
+\title{Opening the Catalogue of Life China checklist web pages with query}
 \usage{
 open_URL(query = NULL, name = "accceptedName", language = "en")
 }
 \arguments{
-\item{query}{\code{string} Query terms, for example accceptedName, scientificName, chineseName or commonName.}
+\item{query}{\code{string} the accceptedName,scientificName,chineseName or commonName.}
 
-\item{name}{\code{string} Query name, name = c("accceptedName", "scientificName", "chineseName", "commonName"), the default value is "accceptedName".}
+\item{name}{\code{string} name = c("accceptedName","scientificName","chineseName","commonName"),the default value is "accceptedName".}
 
-\item{language}{\code{string} Currently only two languages are supported: Chinese and English, language = c("en","zh"), the default value is "en".}
+\item{language}{\code{string} currently only two languages are supported: Chinese and English,language=c("en","zh"), the default value is "en".}
 }
 \description{
-Query with the accceptedName, scientificName, chineseName and commonName, returning the web pages that meets the criteria.
+Query with the accceptedName,scientificName,chineseName and commonName, returning the web pages that meets the criteria.
 }
 \details{
 Visit the website \url{http://sp2000.org.cn/pageservices/document} for more details.
 }
 \examples{
 \donttest{
-open_URL(query = "Anguilla marmorata", name = "scientificName", language = 'en')
-open_URL(query = "Anguilla marmorata", name = "scientificName", language = 'zh')
+open_URL(query = "Anguilla marmorata",name = "scientificName",language = 'en')
+open_URL(query = "Anguilla marmorata",name = "scientificName",language = 'zh')
 }
 }
 \author{

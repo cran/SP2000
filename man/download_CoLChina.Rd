@@ -12,13 +12,13 @@ download_CoLChina(
 )
 }
 \arguments{
-\item{version}{\code{integer} Release version of annual checklist, the default value is 2019.}
+\item{version}{\code{integer} Release version of annual checklist,the default value is 2019.}
 
-\item{format}{\code{character} Release version of format, the default value is zip.}
+\item{format}{\code{character} Release version of format,the default value is zip.}
 
-\item{download}{\code{logic} TRUE or FALSE, the default value is FALSE.}
+\item{download}{\code{logic} TRUE or FALSE,the default value is FALSE.}
 
-\item{dir}{A non-empty character vector giving the directory name by user, the default value is dir = tempdir(), see \code{\link[=tempdir]{tempdir()}} for details.}
+\item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.}
 }
 \value{
 URL
@@ -32,7 +32,7 @@ Visit the website \url{http://sp2000.org.cn/download} for more details.
 \examples{
 \donttest{
 dir <- tempdir()
-download_CoLChina(version = "2019", format = "zip", download = TRUE, dir = dir)
+download_CoLChina(version = "2019",format = "zip",download = TRUE, dir = dir)
 }
 }
 \author{
