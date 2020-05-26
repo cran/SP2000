@@ -1,7 +1,7 @@
 ##' @title Search taxon IDs
 ##' @description Search taxon IDs via familyID ,scientificName and commonName.
-##' @rdname search_taxonID
-##' @name search_taxonID
+##' @rdname search_taxonid
+##' @name search_taxonid
 ##' @param query \code{string} familyID ,scientificName or commonName.
 ##' @param name \code{character} name=c("familyID","scientificName","commonName"),the default value is "scientificName".
 ##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.
@@ -21,17 +21,17 @@
 ##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details
 ##' @examples
 #' \dontrun{
-#' search_taxonID(query = "Uncia uncia",name = "scientificName")
+#' search_taxonid(query = "Uncia uncia",name = "scientificName")
 #' queries <- c("Anguilla marmorata","Uncia uncia")
-#' search_taxonID(query = queries,name = "scientificName")
+#' search_taxonid(query = queries,name = "scientificName")
 #'
-#' x1 <- search_familyID(query = "Cyprinidae")
-#' x2 <- search_taxonID(query = x1$familyIDs,name = "familyID")
+#' x1 <- search_familyid(query = "Cyprinidae")
+#' x2 <- search_taxonid(query = x1$familyIDs,name = "familyID")
 #' x2$family <- rep(x1$family,dim(x2)[1])
 #' }
 ##' @export
 
-search_taxonID <- function(query = NULL,name = 'scientificName',mc.cores = 2) {
+search_taxonid <- function(query = NULL,name = 'scientificName',mc.cores = 2) {
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   name <- match.arg(name, c("familyID","scientificName","commonName"))
   if(.Platform$OS.type == "windows") {

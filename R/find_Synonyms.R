@@ -1,7 +1,7 @@
 ##' @title Find synonyms via species name
 ##' @description Find synonyms via species name from Catalogue of Life Global.
-##' @param query \code{character} species name,The function is similar to \link{get_CoLGlobal}.
-##' @rdname find_Synonyms
+##' @param query \code{character} species name,The function is similar to [get_colglobal()].
+##' @rdname find_synonyms
 ##' @importFrom jsonlite fromJSON
 ##' @importFrom rlist list.rbind
 ##' @return object
@@ -9,18 +9,18 @@
 ##' @details Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for more details.
 ##' @examples
 ##'\dontrun{
-##' dbentry1 <- get_CoLGlobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
+##' dbentry1 <- get_colglobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
 ##' str(dbentry1)
 ##' head(dbentry1$results)
 ##'
-##' dbentry2 <- get_CoLGlobal(query = "Platalea leucorodia", option = "name")
+##' dbentry2 <- get_colglobal(query = "Platalea leucorodia", option = "name")
 ##' str(dbentry2)
 ##' head(dbentry2$results)
 ##'
-##' Synonyms <- find_Synonyms("Anguilla anguilla")
+##' find_synonyms("Anguilla anguilla")
 ##'}
 ##' @export
-find_Synonyms <- function(query) {
+find_synonyms <- function(query) {
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   synonyms = list()
   species_name_no_spaces = gsub(" ","+",query, fixed=TRUE)
@@ -29,7 +29,7 @@ find_Synonyms <- function(query) {
   if (length(dbentry$results) == 0) {
     print(paste("Unfortunately, no results were found for ", query, ". Please check your spelling."), sep="")
   } else {
-    cat(sprintf("Find the results of synonyms for %s are as follows: ", query),sep = "\n")
+    #cat(sprintf("Find the results of synonyms for %s are as follows: ", query),sep = "\n")
     for (i in 1:length(dbentry$results)) {
       name = paste(dbentry$results[i,]$name)
       if (name == query) {
@@ -46,6 +46,7 @@ find_Synonyms <- function(query) {
       }
     }
   }
+  cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(rlist::list.rbind(synonyms)[,1]), query),sep = "\n")
   return(rlist::list.rbind(synonyms)[,1])
 }
 

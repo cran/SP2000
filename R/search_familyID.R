@@ -1,9 +1,9 @@
 ##' @title Search family IDs
 ##' @description Search family IDs via family name, supports Latin and Chinese names.
-##' @rdname search_familyID
-##' @name search_familyID
+##' @rdname search_familyid
+##' @name search_familyid
 ##' @param query \code{character} Family name, or part of family name, supports Latin and Chinese names.
-##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.
+##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.
 ##' @return dataframe
 ##' @author Liuyong Ding
 ##' @importFrom jsonlite fromJSON
@@ -13,12 +13,12 @@
 ##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details
 ##' @examples
 #' \dontrun{
-#' search_familyID(query = "Cyprinidae")
+#' search_familyid(query = "Cyprinidae")
 #' queries <- c("Rosaceae","Cyprinidae")
-#' search_familyID(query = queries)
+#' search_familyid(query = queries)
 #' }
 ##' @export
-search_familyID <- function(query = NULL,mc.cores = 2) {
+search_familyid <- function(query = NULL,mc.cores = 2) {
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   if (.Platform$OS.type == "windows") {
     mc.cores = 1
