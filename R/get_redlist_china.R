@@ -1,6 +1,6 @@
 #' @title Query Redlist of Chinese Biodiversity
 #' @description Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi.
-#' @rdname get_redlistchina
+#' @rdname get_redlist_china
 #' @param query \code{string} The string to query for.
 #' @param option \code{character} There is one required parameter, which is either Chinese Names or Scientific Names. Give eithera Chinese Names or Scientific Names. If an Scientific Names is given, the Chinese Names parameter may not be used. Only exact matches found the name given will be returned. option=c("Chinese Names","Scientific Names").
 #' @param taxon \code{character} There is one required parameter, taxon=c("Amphibians","Angiospermae","Ascomycetes","Basidiomycetes","Birds","Bryophyta","Gymnospermae","Inland Fishes","Lichens","Mammals","Pteridophyta","Reptiles").
@@ -26,16 +26,17 @@
 #' @return object
 #' @details Visit the website \url{http://www.mee.gov.cn} for more details.
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' #query assessment status via Chinese Names or Scientific Names
-#' get_redlistchina(query = "Anguilla", option = "Scientific Names")
-#' get_redlistchina(query = "Anguilla nebulosa", option = "Scientific Names")
+#' get_redlist_china(query = "Anguilla", option = "Scientific Names")
+#' get_redlist_china(query = "Anguilla nebulosa", option = "Scientific Names")
 #'
 #' #creates an HTML widget to display rectangular data
-#' get_redlistchina(taxon = "Inland Fishes", viewDT = TRUE)
+#' get_redlist_china(taxon = "Inland Fishes", viewDT = TRUE)
+#' }
 #'}
 #' @export
-get_redlistchina <- function(query = NULL,option = NULL,taxon = "Amphibians",viewDT = FALSE){
+get_redlist_china <- function(query = NULL,option = NULL,taxon = "Amphibians",viewDT = FALSE){
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   option <- match.arg(option, c("Chinese Names","Scientific Names"))
   taxon <- match.arg(taxon, c("Amphibians","Angiospermae","Ascomycetes","Basidiomycetes","Birds","Bryophyta",

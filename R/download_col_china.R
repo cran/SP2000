@@ -1,7 +1,7 @@
 #' @title Download 'Catalogue of Life China': Annual Checklist
 #' @description  Organized by the Biodiversity Committee of Chinese Academy of Sciences (BC-CAS), Catalogue of Life China Annual Checklist edition has been compiled by Species 2000 China Node.
-#' @rdname download_colchina
-#' @name download_colchina
+#' @rdname download_col_china
+#' @name download_col_china
 #' @param version \code{integer} Release version of annual checklist,the default value is 2020.
 #' @param OS \code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".
 #' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.
@@ -13,10 +13,10 @@
 #' @examples
 #' \donttest{
 #' dir <- tempdir()
-#' download_colchina(version = "2020",OS = "MacOS", dir = dir)
+#' download_col_china(version = "2020",OS = "MacOS", dir = dir)
 #' }
 #' @export
-download_colchina <- function(version = "2020", OS = "MacOS", dir = tempdir()) {
+download_col_china <- function(version = "2020", OS = "MacOS", dir = tempdir()) {
   cat(sprintf("Download the date: %s",Sys.Date()),sep = "\n")
   version <- match.arg(version, 2018:2020)
   OS <- match.arg(OS, c("MacOS", "Ubuntu" ,"Windows"))
