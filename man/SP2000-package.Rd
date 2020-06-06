@@ -34,10 +34,11 @@ familyid <- search_family_id(query = "Anguillidae")
 
 taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
 
-search_taxon_id(query = c("Anguilla marmorata","Anguilla japonica",
-                          "Anguilla bicolor","Anguilla nebulosa",
-                          "Anguilla luzonensis")),
-                          name = "scientificName")
+queries = c("Anguilla marmorata","Anguilla japonica",
+            "Anguilla bicolor","Anguilla nebulosa",
+            "Anguilla luzonensis")
+
+search_taxon_id(query = queries,name = "scientificName")
 
 #Download detailed lists via species or infraspecies ID
 

@@ -26,7 +26,7 @@ Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for
 x <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
                               "Anguilla bicolor","Anguilla nebulosa",
                               "Anguilla luzonensis"),
-                              option = "name")
+                               option = "name")
 str(x)
 
 ##Find synonyms via species name

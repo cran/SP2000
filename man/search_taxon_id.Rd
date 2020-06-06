@@ -44,9 +44,9 @@ taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
 
 ##Search taxon IDs via scientificName
 taxonid <- search_taxon_id(query = c("Anguilla marmorata","Anguilla japonica",
-                        "Anguilla bicolor","Anguilla nebulosa",
-                        "Anguilla luzonensis"),
-                        name = "scientificName")
+                                     "Anguilla bicolor","Anguilla nebulosa",
+                                     "Anguilla luzonensis"),
+                                     name = "scientificName")
 
 }
 }

@@ -14,7 +14,7 @@
 ##' \donttest{
 ##' get_col_taiwan(query="Anguilla",tree="name",option = "contain")
 ##'
-##' get_col_taiwan(query="Giganthorhynchidae",tree="family")
+##' get_col_taiwan(query="Anguillidae",tree="family")
 ##' }
 ##' @export
 

@@ -51,9 +51,9 @@
 ##'
 ##' #Get Catalogue of Life Global checklist via species name
 ##' x2 <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
-##'                         "Anguilla bicolor","Anguilla nebulosa",
-##'                         "Anguilla luzonensis"),
-##'                         option = "name")
+##'                                "Anguilla bicolor","Anguilla nebulosa",
+##'                                "Anguilla luzonensis"),
+##'                                option = "name")
 ##' str(x2)
 ##' x2 <- list_df(x2,db = "colglobal")
 ##' }

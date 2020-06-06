@@ -34,7 +34,6 @@
 #' #creates an HTML widget to display rectangular data
 #' get_redlist_china(taxon = "Inland Fishes", viewDT = TRUE)
 #' }
-#'}
 #' @export
 get_redlist_china <- function(query = NULL,option = NULL,taxon = "Amphibians",viewDT = FALSE){
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
