@@ -9,4 +9,3 @@ library(SP2000)
 if(identical(Sys.getenv("NOT_CRAN"), "true")){
   test_check("SP2000")
 }
-

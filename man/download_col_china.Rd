@@ -4,7 +4,7 @@
 \alias{download_col_china}
 \title{Download 'Catalogue of Life China': Annual Checklist}
 \usage{
-download_col_china(version = "2020", OS = "MacOS", dir = tempdir())
+download_col_china(version = "2020", OS = "MacOS", dir = tempdir(), mode, ...)
 }
 \arguments{
 \item{version}{\code{integer} Release version of annual checklist,the default value is 2020.}
@@ -12,6 +12,10 @@ download_col_china(version = "2020", OS = "MacOS", dir = tempdir())
 \item{OS}{\code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".}
 
 \item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.}
+
+\item{mode}{A character string specifying the mode with which to write the file. Useful values are "w", "wb" (binary), "a" (append) and "ab". see \code{\link{download.file}} for details.}
+
+\item{...}{allow additional arguments to be passed, unused.see \code{\link{download.file}} for details.}
 }
 \value{
 URL
@@ -23,7 +27,7 @@ Organized by the Biodiversity Committee of Chinese Academy of Sciences (BC-CAS),
 Visit the website \url{http://sp2000.org.cn/download} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 dir <- tempdir()
 download_col_china(version = "2020",OS = "MacOS", dir = dir)
 }

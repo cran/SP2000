@@ -31,6 +31,7 @@ Visit the website \url{https://taibnet.sinica.edu.tw/eng/taibnet_species_query.p
 }
 \examples{
 \dontrun{
+##Search Catalogue of Life Taiwan checklist
 get_col_taiwan(query="Anguilla",level="species",option = "contain")
 
 get_col_taiwan(query="Anguillidae",level="family")
